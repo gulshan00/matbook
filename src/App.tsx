@@ -61,7 +61,7 @@ export default function Home() {
     data: FormData;
   }
 
- async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const errors = validate();
@@ -103,8 +103,9 @@ export default function Home() {
           <section className="lg:col-span-7">
             <Card>
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold">Employee Onboarding (UI only)</h2>
-                <div className="text-sm text-slate-500">Responsive • Tailwind • React</div>
+                <h2 className="text-lg font-semibold">Employee Onboarding</h2>
+             <div className="text-sm text-slate-500">Employee Onboarding • Profile Setup • Document Submission</div>
+
               </div>
 
               {view === 'form' ? (
@@ -232,17 +233,24 @@ export default function Home() {
             </Card>
 
             <Card className="mt-4">
-              <h4 className="font-medium mb-2">Responsive Tips</h4>
+              <h4 className="font-medium mb-2">Employee Onboarding Rules</h4>
               <ul className="text-sm text-slate-600 list-disc pl-5 space-y-1">
-                <li>Use grid utilities (grid-cols-*) to adapt to screen sizes.</li>
-                <li>Keep tables horizontally scrollable on small screens (overflow-auto).</li>
-                <li>Prefer stacked form fields on mobile (one column) — use multi-column for larger screens.</li>
+                <li>All new employees must complete their profile details accurately before onboarding.</li>
+                <li>Submit required documents (ID proof, address proof, educational certificates) within the first week.</li>
+                <li>Follow the company code of conduct and communication guidelines from day one.</li>
+                <li>Attend all mandatory onboarding sessions and training scheduled by HR.</li>
+                <li>Ensure timely completion of assigned onboarding tasks in the portal.</li>
+                <li>Reach out to HR immediately if any onboarding information or document is unclear.</li>
               </ul>
             </Card>
+
           </aside>
         </main>
 
-        <footer className="mt-8 text-center text-sm text-slate-500">UI-only demo • Drop-in component for your React + Tailwind project</footer>
+        <footer className="mt-8 text-center text-sm text-slate-500">
+          Employee Onboarding Portal • Please ensure all profile details and documents are submitted on time
+        </footer>
+
       </div>
     </div>
   );
@@ -255,7 +263,7 @@ function Header({ view, setView, total }: { view: 'form' | 'table'; setView: Rea
         <div className="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-white font-bold">M</div>
         <div>
           <div className="text-lg font-semibold">MatBook UI</div>
-          <div className="text-xs text-slate-500">Employee onboarding — UI only</div>
+          <div className="text-xs text-slate-500">Employee onboarding</div>
         </div>
       </div>
 
